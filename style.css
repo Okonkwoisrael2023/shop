@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(16, 14, 13, 0.753);
+    margin: 0;
+    color: rgba(244, 235, 215, 0.866);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14%;
+    background-image: url(/images/download\ \(3\).jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.dynamic {
+    background-color: aliceblue;
+    width: 600px;
+    height: 36px;
+    border-radius: 20px;
+    margin: 10px auto;
+    margin-top: -260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo img {
+    width: 70px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.nav {
+    margin-left: 70px;
+}
