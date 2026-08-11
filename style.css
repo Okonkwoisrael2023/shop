@@ -1,29 +1,36 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgba(16, 14, 13, 0.753);
     margin: 0;
     color: rgba(244, 235, 215, 0.866);
 }
 
-.navbar {
+.back-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14%;
-    background-image: url(/images/download\ \(3\).jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
 
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 53%;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .dynamic {
-    background-color: aliceblue;
+    background-color: white;
     width: 600px;
     height: 36px;
     border-radius: 20px;
     margin: 10px auto;
-    margin-top: -260px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -35,11 +42,195 @@ body {
 }
 
 .nav a {
-    color: black;
+    color: rgb(55, 43, 13);
     text-decoration: none;
     margin: 5px;
 }
 
 .nav {
     margin-left: 70px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.write-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.write-up h1 {
+    color: white;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.write-up h2 {
+    font-size: 40px;
+
+}
+
+.write-up button {
+  background-color: rgba(244, 235, 215, 0.866);
+  border-radius: 20px;
+  font-size: larger;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+/* Container & Layout */
+.product-highlights {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.highlights-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.highlights-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.highlights-header p {
+  color: #666;
+}
+
+/* CSS Grid for Responsiveness */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Product Card Styling */
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  background: #f8f8f8;
+}
+
+.product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badges (Sale, New, etc.) */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #e74c3c;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.badge.new {
+  background: #2ecc71;
+}
+
+/* Product Information */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.product-price {
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+/* Call to Action Button */
+.add-to-cart {
+  margin-top: auto;
+  background-color: rgba(193, 169, 117, 0.866);
+  color: black;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #2980b9;
+}
+
+/* footer  */
+.footer {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.link a{
+    text-decoration: none;
+    color: rgba(193, 169, 117, 0.866);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
