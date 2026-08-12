@@ -12,10 +12,11 @@ body {
     width: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
 }
 
 
-.hero::before{
+/* .hero::before{
     content: "";
     position: absolute;
     top: 0;
@@ -23,7 +24,7 @@ body {
     width: 100%;
     height: 53%;
     background-color: rgba(0, 0, 0, 0.5)
-}
+} */
 
 .dynamic {
     background-color: white;
@@ -45,6 +46,7 @@ body {
     color: rgb(55, 43, 13);
     text-decoration: none;
     margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .nav {
@@ -76,6 +78,10 @@ body {
 
 }
 
+.tx1 {
+  color: rgba(223, 176, 24, 0.866);
+}
+
 .write-up button {
   background-color: rgba(244, 235, 215, 0.866);
   border-radius: 20px;
@@ -87,6 +93,8 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border: rgba(244, 235, 215, 0.866) 2px;
+  box-shadow: black 2px;
 }
 
 
