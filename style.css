@@ -53,6 +53,21 @@ body {
     margin-left: 70px;
 }
 
+.hamburger {
+  display: none; 
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
 .content {
     display: flex;
     align-items: center;
@@ -78,9 +93,6 @@ body {
 
 }
 
-.tx1 {
-  color: rgba(223, 176, 24, 0.866);
-}
 
 .write-up button {
   background-color: rgba(244, 235, 215, 0.866);
@@ -93,8 +105,9 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border: rgba(244, 235, 215, 0.866) 2px;
-  box-shadow: black 2px;
+  border: rgba(244, 235, 215, 0.866) 2px solid;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 
 
@@ -147,7 +160,7 @@ body {
 .product-image {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 100%; 
   background: #f8f8f8;
 }
 
@@ -160,22 +173,6 @@ body {
   object-fit: cover;
 }
 
-/* Badges (Sale, New, etc.) */
-.badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #e74c3c;
-  color: white;
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.badge.new {
-  background: #2ecc71;
-}
 
 /* Product Information */
 .product-info {
@@ -223,7 +220,8 @@ body {
 }
 
 .add-to-cart:hover {
-  background: #2980b9;
+  background: #1d1e19;
+  color: rgba(193, 169, 117, 0.866);
 }
 
 /* footer  */
@@ -242,3 +240,26 @@ body {
     color: rgba(193, 169, 117, 0.866);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;              /* hidden until toggled */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;              
+  }
+
+  .hamburger {
+    display: flex;              
+  }
+}
+
