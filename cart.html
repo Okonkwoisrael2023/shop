@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Indoor-Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="page-nav-wrap">
+        <div class="dynamic">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Indoor-Store logo">
+                <span class="logo-text">Indoor-Store</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="cart.html" class="cart-link active">Cart <span class="cart-count"></span></a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1>Your Cart</h1>
+        <p>Review your selected pieces before checkout.</p>
+    </div>
+
+    <div class="cart-container" id="cart-container">
+        <!-- Filled by JS -->
+    </div>
+
+    <footer class="footer">
+        <div class="write-up"><h2>Hope You Enjoyed Your Stay</h2></div>
+        <div class="link">
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="index.html">Home</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function renderCart() {
+        const container = document.getElementById('cart-container');
+        const cart = getCart();
+        if (!cart.length) {
+          container.innerHTML = `
+            <div class="cart-empty">
+              <p>Your cart is empty.</p>
+              <a href="index.html#products" class="cta-btn">Browse Products</a>
+            </div>`;
+          return;
+        }
+        let total = 0;
+        let html = '';
+        cart.forEach(item => {
+          const sub = item.price * item.qty;
+          total += sub;
+          html += `
+            <div class="cart-item" data-id="${item.id}">
+              <img src="${item.image}" alt="${item.name}">
+              <div class="cart-item-info">
+                <h3>${item.name}</h3>
+                <p class="price">$${item.price.toFixed(2)}</p>
+              </div>
+              <div class="cart-item-qty">
+                <button class="qty-btn" onclick="changeQty('${item.id}', -1)">−</button>
+                <span>${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty('${item.id}', 1)">+</button>
+              </div>
+              <div style="min-width:80px;text-align:right;font-weight:600;">$${sub.toFixed(2)}</div>
+            </div>`;
+        });
+        html += `
+          <div class="cart-total">
+            <h3>Total: $${total.toFixed(2)}</h3>
+            <button class="cta-btn" onclick="checkout()">Proceed to Checkout</button>
+          </div>`;
+        container.innerHTML = html;
+      }
+
+      function changeQty(id, delta) {
+        let cart = getCart();
+        const item = cart.find(i => i.id === id);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+        saveCart(cart);
+        renderCart();
+      }
+
+      function checkout() {
+        showToast('Thank you! Checkout is a demo — no payment processed.');
+        localStorage.removeItem(CART_KEY);
+        updateCartCount();
+        renderCart();
+      }
+
+      document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>

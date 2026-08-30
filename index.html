@@ -3,168 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indoor-Store</title>
+    <title>Indoor-Store | Luxury Interiors</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
 </head>
 <body>
-    
-    <section class="body">
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=80" alt="Luxury interior living room" class="back-img">
 
-        <div class="hero">
+        <div class="dynamic">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Indoor-Store logo">
+            </a>
 
-            <img src="img.jpg" alt="" srcset="" class="back-img">
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div class="dynamic">
-                <div class="logo">
-                    <img src="logo.png" alt="" srcset="">
-                </div>
-
-                <div class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="#Carts">Cart</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy</a>
-                </div>
-            </div>
-            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"></button>
-
-            <div class="content">
-
-                <div class="write-up">
-                    <h1> Welcome!</h1>
-                    <h2>To where you connet to luxury <span class="tx1">interior</span></h2>
-                    <button>Buy Now!</button>
-                     
-                </div> 
-            </div>
-
+            <nav class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="cart.html" class="cart-link">Cart <span class="cart-count"></span></a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
         </div>
 
-
-        
-        <section class="product-highlights">
-           <div class="highlights-header">
-              <h2>Featured Products</h2>
-              <p>Discover our most popular picks this week.</p>
-            </div>
-
-           <div class="product-grid">
-
-             <!--  Card 1 -->
-           <div class="product-card">
-               <div class="product-image">
-                  <img src="pro1.jpg" alt="">
-                </div>
-
-                <div class="product-info">
-                      <h3 class="product-title">bubble</h3>
-                       <p class="product-price">
-                       <span class="current-price">$120.00</span>
-                       <span class="old-price">$150.00</span>
-                       </p>
-                      <button class="add-to-cart">Add to Cart</button>
-                </div>
-          </div>
- 
-              <!-- Card 2 -->
-               <div class="product-card">
-
-                 <div class="product-image">
-                   <img src="pro2.jpg" alt="">
-                 </div>
-
-                 <div class="product-info">
-                        <h3 class="product-title">Calm</h3>
-                        <p class="product-price">
-                        <span class="current-price">$85.00</span>
-                        </p>
-                        <button class="add-to-cart">Add to Cart</button>
-
-                    </div>
-               </div>
-                    <!-- Card 3 -->
-                     <div class="product-card">
-                        <div class="product-image">
-                          <img src="pro3.jpg" alt="">
-                       </div>
-
-                       <div class="product-info">
-                            <h3 class="product-title">Couch by Ashley</h3>
-                            <p class="product-price">
-                            <span class="current-price">$65.00</span>
-                            </p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-        
-                    <!-- Card 4 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="pro1.jpg" alt="">
-                        </div>
-
-                        <div class="product-info">
-                            <h3 class="product-title">Smottle</h3>
-                            <p class="product-price">
-                                <span class="current-price">$30.34</span>
-                            </p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="pro1.jpg" alt="">
-                        </div>
-
-                        <div class="product-info">
-                            <h3 class="product-title">Smottle</h3>
-                            <p class="product-price">
-                                <span class="current-price">$30.34</span>
-                            </p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <!-- card 6 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="pro1.jpg" alt="">
-                        </div>
-
-                        <div class="product-info">
-                            <h3 class="product-title">Smottle</h3>
-                            <p class="product-price">
-                                <span class="current-price">$30.34</span>
-                            </p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
- 
-        </section>
-
-        <div class="footer">
+        <div class="content">
             <div class="write-up">
-                <h2>Hope You Enjoyed Your Stay</h2> 
-            </div>
-
-            <div class="link">
-                <a href="">Privacy</a>
-                <a href="">Contact</a>
-                <button></button>
+                <h1>Welcome!</h1>
+                <h2>To where you connect to luxury <span class="tx1">interior</span></h2>
+                <a href="#products" class="cta-btn">Buy Now!</a>
             </div>
         </div>
-                
     </section>
 
+    <section class="product-highlights" id="products">
+        <div class="highlights-header">
+            <h2>Featured Products</h2>
+            <p>Discover our most popular picks this week.</p>
+        </div>
 
+        <div class="product-grid">
+            <!-- Card 1: Bubble -->
+            <div class="product-card" data-product data-id="bubble" data-name="Bubble" data-price="120" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" data-link="product-bubble.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Bubble lounge chair">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bubble</h3>
+                    <p class="product-desc">Sculptural lounge chair with soft curves and premium upholstery.</p>
+                    <p class="product-price">
+                        <span class="current-price">$120.00</span>
+                        <span class="old-price">$150.00</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-bubble.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 2: Calm -->
+            <div class="product-card" data-product data-id="calm" data-name="Calm" data-price="85" data-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" data-link="product-calm.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Calm sofa">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Calm</h3>
+                    <p class="product-desc">Minimalist sofa designed for quiet moments and everyday comfort.</p>
+                    <p class="product-price">
+                        <span class="current-price">$85.00</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-calm.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 3: Couch by Ashley -->
+            <div class="product-card" data-product data-id="couch-ashley" data-name="Couch by Ashley" data-price="65" data-image="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80" data-link="product-couch.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80" alt="Couch by Ashley">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Couch by Ashley</h3>
+                    <p class="product-desc">Classic mid-century inspired couch with tailored cushions.</p>
+                    <p class="product-price">
+                        <span class="current-price">$65.00</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-couch.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 4: Smottle -->
+            <div class="product-card" data-product data-id="smottle" data-name="Smottle" data-price="30.34" data-image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&q=80" data-link="product-smottle.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&q=80" alt="Smottle side table">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smottle</h3>
+                    <p class="product-desc">Compact side table with warm wood tones and clean lines.</p>
+                    <p class="product-price">
+                        <span class="current-price">$30.34</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-smottle.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 5: Lumen Lamp -->
+            <div class="product-card" data-product data-id="lumen" data-name="Lumen Lamp" data-price="48" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80" data-link="product-lumen.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80" alt="Lumen floor lamp">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Lumen Lamp</h3>
+                    <p class="product-desc">Elegant floor lamp that casts a warm, inviting glow.</p>
+                    <p class="product-price">
+                        <span class="current-price">$48.00</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-lumen.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 6: Nest Shelf -->
+            <div class="product-card" data-product data-id="nest" data-name="Nest Shelf" data-price="72" data-image="https://images.unsplash.com/photo-1594026112284-02bb6f3353fe?w=600&q=80" data-link="product-nest.html">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3353fe?w=600&q=80" alt="Nest open shelf">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Nest Shelf</h3>
+                    <p class="product-desc">Open shelving unit perfect for books, plants, and décor.</p>
+                    <p class="product-price">
+                        <span class="current-price">$72.00</span>
+                    </p>
+                    <div class="card-actions">
+                        <a href="product-nest.html" class="view-details">View Details</a>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="write-up">
+            <h2>Hope You Enjoyed Your Stay</h2>
+        </div>
+        <div class="link">
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="index.html">Home</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
