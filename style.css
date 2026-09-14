@@ -54,7 +54,9 @@ body {
 
 /* ===== NAV ===== */
 .dynamic {
-  position: relative;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.95);
   width: 90%;
@@ -69,18 +71,9 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
 
-.logo img,
-.logo svg {
-  width: 42px;
-  height: 42px;
-  display: block;
+.logo img {
+  width: 70px;
 }
 
 .logo-text {
@@ -251,7 +244,7 @@ body {
   margin: 0 auto;
   padding: 50px 20px 60px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  flex: 1;
+  flex: 2;
 }
 
 .highlights-header {
@@ -273,7 +266,7 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: auto auto;
   gap: 28px;
 }
 
