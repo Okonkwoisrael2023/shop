@@ -54,8 +54,10 @@ body {
 
 /* ===== NAV ===== */
 .dynamic {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.95);
@@ -182,6 +184,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 70px;
   padding: 60px 20px 80px;
   min-height: 340px;
 }
